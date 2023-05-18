@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap');
+
+:root{
+    --primary-text : #F36D52;
+    --heading-text : #292929;
+    --color-text-white : #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+.main{
+    background-image:linear-gradient(rgba(111, 101, 101, 0.48), rgba(168, 79, 10, 0.3)), url(../assets/images/wallpapers/wallpapers-home.avif);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Start Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+.navbar img{
+    width: 150px;
+    max-width: 100%;
+}
+.navbar-menu{
+    display: none;
+    list-style: none;
+    margin: 0;
+    background: var(--heading-text);
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.navbar-menu li{
+    margin: 10px 0;
+}
+.navbar-menu li a{
+    color: var(--color-text-white);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.navbar-toggle{
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.navbar-toggle-icon{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-white);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after{
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-white);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-toggle-icon::before{
+    transform: translateY(-8px);
+}
+.navbar-toggle-icon::after{
+    transform: translateY(-8px);
+}
+.show{
+    display: block;
+}
+
+.navbar-toggle.opened .navbar-toggle-icon {
+    transform: rotate(45deg);
+}
+.navbar-toggle.opened .navbar-toggle-icon::before {
+    transform: translateY(8px) rotate(90deg);
+}
+.navbar-toggle.opened .navbar-toggle-icon::after {
+    transform: translateY(-8px) rotate(-90deg);
+}
+/* End Navbar */
+
+
+.welcome-website{
+    text-align: center;
+    margin-top: 30px;
+}
+.welcome-website h1{
+    font-size: 35px;
+    color: var(--primary-text);
+}
+.welcome-website p{
+    margin-top: 20px;
+    line-height: 2.5;
+    color: var(--color-text-white);
+    font-size: 18;
+}
+
+.form-login-in{
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-text);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.7);
+    margin-top: 100px;
+}
+.form-login-in h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-text-white);
+}
+.form label{
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-text-white);
+}
+.form input[type="text"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--heading-text);
+    border-radius: 4px;
+}
+.form button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--heading-text);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+.form a{
+    color: var(--color-text-white);
+}
+footer p{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-text-white);
+}
+footer p span{
+    color: var(--primary-text);
+}
+
+/* Start Page Information */
+
+.info-company{
+    text-align: center;
+}
+.info-company h1{
+    color: var(--primary-text);
+    font-size: 40px;
+    margin: 20px 0;
+}
+.info-company h4{
+    color: var(--color-text-white);
+    line-height: 2.5;
+
+}
+.information-company{
+    text-align: right;
+    padding: 10px;
+}
+.information-company h4{
+    color: var(--primary-text);
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+    font-size: 20px;
+}
+.information-company p{
+    color: var(--color-text-white);
+    padding: 10px;
+}
+/* End Page Information */
